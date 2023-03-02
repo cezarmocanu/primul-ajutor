@@ -4,7 +4,7 @@ import ModuleEntry from "./ModuleEntry";
 import box from 'src/assets/box.png';
 import calendarWhite from 'src/assets/calendar-white.png';
 
-export default function SearchTool (props) {
+export default function SearchTool ({titluModul, }) {
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -24,7 +24,7 @@ export default function SearchTool (props) {
                     </div>
                         <select name="Modul" id="modul-select" className='border-2 input-text'>
                             <option value="">Alege un modul</option>
-                            <option>{props.titluModul}</option>
+                            <option>{titluModul}</option>
                         </select>
                 </div>
                 <div className="modul-data flex">
